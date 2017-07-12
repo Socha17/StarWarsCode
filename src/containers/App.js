@@ -19,10 +19,11 @@ class App extends Component {
  }
 
   render() {
+
     return (
       <div className="App">
         <SearchForm gotResulsts={this.gotResulsts}/>
-        <List/>
+        <List results={this.state.searchResults}/>
       </div>
     );
   }
