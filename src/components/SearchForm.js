@@ -34,14 +34,16 @@ class SearchForm extends Component {
 
   render() {
     return (
-    <div>
+    <div className="searchForm">
       <h1>Search</h1>
-      <form>
-        <input type="text" name="search" placeholder="Search" onChange={this.handleTextChange}/> <br/>
-        <input type="radio" name="people" value="people" onChange={this.handleRadioChange} checked={this.state.category === 'people'}/> People
-        <input type="radio" name="planets" value="planets" onChange={this.handleRadioChange} checked={this.state.category === 'planets'} /> Planets
-        <input type="radio" name="starships" value="starships" onChange={this.handleRadioChange} checked={this.state.category === 'starships'} /> Starships
-        <input type="submit" value="Submit" onClick={this.searchResults}/>
+      <form className="">
+        <input type="text" name="search" placeholder="C-3PO" className="col s12 m12 l12" onChange={this.handleTextChange}/> <br/>
+        <div className="radioBtns col l7.5 m8 s12">
+        <input id="people" type="radio" name="people" value="people" onChange={this.handleRadioChange} checked={this.state.category === 'people'}/>  <label htmlFor="people">People</label>
+        <input id="planets" type="radio" name="planets" value="planets" onChange={this.handleRadioChange} checked={this.state.category === 'planets'} /> <label htmlFor="planets">Planets</label>
+        <input id="starships" type="radio" name="starships" value="starships" onChange={this.handleRadioChange} checked={this.state.category === 'starships'} /> <label htmlFor="starships">Starships</label>
+        </div>
+        <input type="submit" value="Submit" className="subBtn right col s12 m3 l3" onClick={this.searchResults}/>
       </form>
     </div>
     );

@@ -37,13 +37,13 @@ class List extends Component {
       // loop through list of names
       let data = this.state.data.results;
       const listItems = data.map((data) =>
-      <div key={data.name}>
-          <button><Link to={"/details" + data.url.split('http://swapi.co/api')[1]}>{data.name}</Link></button>
+      <div key={data.name} className="slide">
+          <div className="card-panel hoverable"><Link to={"/details" + data.url.split('http://swapi.co/api')[1]}>{data.name}</Link></div>
       </div>
       );
       return (
-        <div>
-          <h1>List</h1>
+        <div className="col s12 m12 l8 push-l2 listArea center-align">
+          <h3>List</h3>
           {this.state.zeroResults ? <div>No Results</div> : listItems}
         </div>
       );

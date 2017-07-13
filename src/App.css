@@ -1,24 +1,194 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+body {
+  font-family: 'Poppins', sans-serif;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+
+.seachSection {
+  background-color: #40798C;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.row {
+  margin-bottom: 0px;
+}
+
+
+.ListSection {
+  overflow-y: scroll;
+  background-color: #1D3461;
+  height: 100vh;
+}
+
+.searchForm {
+  color: white;
+  margin: 300px auto 0 auto;
+  width: 65%;
+}
+
+.detailSection {
+  position: fixed;
+  left: 0px;
+  background-color: #70A9A1;
+  max-height: 100vh;
+  min-height: 100%;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+
+.slide {
+  transition: all 2s;
+}
+
+
+.slide {
+  animation: slideList 0.5s ease-in-out forwards;
+}
+
+@keyframes slideList {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.card-panel {
+  padding: 29px;
+  transition: all 0.5s;
+}
+
+
+.subBtn {
+  height: 35px;
+  margin-left: 5%;
+  padding: 5px;
+  border: 1px solid white;
+  background: none;
+  width: 150px;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+
+.subBtn:hover {
+  color: #40798C;
+  background: white;
+}
+
+a {
+  color: #40798C;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 2em 7em 2em 7em;
+  margin: -2em;
+}
+
+.card-panel:hover {
+  transition: all 0.5s;
+  padding: 32px;
+}
+
+
+.details {
+  max-width: 50%;
+  margin: auto;
+}
+
+.details span {
+  max-width: 50%;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+.detailsTitle {
+  width: 52%;
+  margin: 50px auto 20px auto;
+
+}
+
+.backBtn {
+  margin-top: 30px;
+  height: 40px;
+}
+
+.backBtn a {
+  color: white;
+  transition: all 0.5s;
+}
+
+.backBtn a:hover {
+  color: #40798C;
+}
+
+label {
+  color: white;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+
+
+[type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
+  border: 2px solid white;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+  background-color: #1D3461;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+  border: 2px solid #1D3461;
+}
+
+@media only screen and (max-width: 990px) {
+  .ListSection {
+    display: block;
+    overflow:auto;
+    background-color: #1D3461;
+  }
+
+  .details {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .searchForm {
+    color: white;
+    margin: 30vh auto 0 auto;
+    width: 80%;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.subBtn {
+  margin-top: 50px;
+}
+
+}
+
+
+@media only screen and (max-width: 450px) {
+  .details {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .searchForm {
+    color: white;
+    margin: 30vh auto 0 auto;
+    width: 90%;
+  }
+
 }
