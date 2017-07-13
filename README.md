@@ -1,12 +1,14 @@
 To Run this
 First Clone the repo
-
 ### `git clone https://github.com/Socha17/StarWarsCode.git starWarsApi`
 
+Change directories into the folder you created
 ### `cd starWarsApi`
 
+install dependencies
 ### `npm install`
 
+run server
 ### `npm start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
