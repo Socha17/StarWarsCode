@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 
 class SearchForm extends Component {
-
+  // keeps track of category selected and search params entered
   constructor(props) {
     super(props);
     this.state = {
@@ -21,12 +21,12 @@ class SearchForm extends Component {
     this.setState({search: e.target.value});
   }
 
+  // gets search results
   searchResults = (e) => {
     e.preventDefault()
     fetch('https://swapi.co/api/' + this.state.category + '/?search=' + this.state.search)
     .then(response => response.json())
     .then((json) => {
-      console.log(json)
       this.props.gotResulsts(json)
     })
     .catch(error => console.log(error))

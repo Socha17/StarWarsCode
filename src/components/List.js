@@ -7,6 +7,7 @@ class List extends Component {
     super(props)
     this.state = {
       gotData: false,
+      zeroResults: false,
       data: {
         results: []
       }
@@ -17,21 +18,23 @@ class List extends Component {
     let newState = this.state
     newState.gotData = true;
     newState.data = data.results
+
+    if (data.results.count === 0) {
+      newState.zeroResults = true;
+    } else {
+      newState.zeroResults = false;
+    }
+
     this.setState(newState)
   }
 
-  componentWillUnmount() {
-    console.log("unmounting");
-    let newState = this.state
-    newState.gotData = false;
-    this.setState(newState)
-  }
 
   render() {
-
+    // show no list if no props have been received
     if (!this.state.gotData || this.state.data === '') {
       return ( <div></div> );
     } else {
+      // loop through list of names
       let data = this.state.data.results;
       const listItems = data.map((data) =>
       <div key={data.name}>
@@ -41,7 +44,7 @@ class List extends Component {
       return (
         <div>
           <h1>List</h1>
-          {listItems}
+          {this.state.zeroResults ? <div>No Results</div> : listItems}
         </div>
       );
     }
