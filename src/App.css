@@ -61,12 +61,10 @@ body {
   }
 }
 
-
 .card-panel {
   padding: 29px;
   transition: all 0.5s;
 }
-
 
 .subBtn {
   height: 35px;
@@ -80,8 +78,33 @@ body {
 }
 
 .subBtn:hover {
-  color: #40798C;
   background: white;
+  box-shadow: 1px 1px 1px #616161;
+}
+
+.subBtn span {
+  transition: all 0.5s ease-in-out;
+}
+
+.subBtn:hover span {
+  padding-right: 25px;
+  color: #40798C;
+}
+
+.subBtn:hover .searchIcon {
+  opacity: 1;
+  padding-left: 70px;
+  transition-delay: 0.1s;
+}
+
+.searchIcon  {
+  padding-left: 30px;
+  position: fixed;
+  vertical-align: sub;
+  font-size: 1.3em !important;
+  color: #40798C;
+  transition: all 0.5s;
+  opacity: 0;
 }
 
 a {
@@ -137,6 +160,21 @@ label {
 }
 
 
+i.small {
+  display: inline;
+}
+
+.searchForm h1 {
+  margin-top: 0;
+}
+/*
+.searchForm h1::before {
+  font-family: "Material Icons";
+  content: "\E8B6";
+  vertical-align: middle;
+  margin-right: 15px;
+}*/
+
 [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
   border: 2px solid white;
 }
@@ -168,6 +206,7 @@ label {
   }
 
 }
+
 
 
 @media only screen and (max-width: 600px) {

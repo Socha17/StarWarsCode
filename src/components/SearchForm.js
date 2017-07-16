@@ -35,6 +35,7 @@ class SearchForm extends Component {
   render() {
     return (
     <div className="searchForm">
+      <i className="medium material-icons">search</i>
       <h1>Search</h1>
       <form className="">
         <input type="text" name="search" placeholder="C-3PO" className="col s12 m12 l12" onChange={this.handleTextChange}/> <br/>
@@ -43,7 +44,7 @@ class SearchForm extends Component {
         <input id="planets" type="radio" name="planets" value="planets" onChange={this.handleRadioChange} checked={this.state.category === 'planets'} /> <label htmlFor="planets">Planets</label>
         <input id="starships" type="radio" name="starships" value="starships" onChange={this.handleRadioChange} checked={this.state.category === 'starships'} /> <label htmlFor="starships">Starships</label>
         </div>
-        <input type="submit" value="Submit" className="subBtn right col s12 m3 l3" onClick={this.searchResults}/>
+        <button type="submit" className="subBtn right col s12 m3 l3" onClick={this.searchResults}><i className="searchIcon tiny material-icons">search</i><span>Search</span></button>
       </form>
     </div>
     );
