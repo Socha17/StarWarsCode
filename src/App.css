@@ -167,6 +167,10 @@ i.small {
 .searchForm h1 {
   margin-top: 0;
 }
+
+button:focus {
+  background-color: #40798C;
+}
 /*
 .searchForm h1::before {
   font-family: "Material Icons";
