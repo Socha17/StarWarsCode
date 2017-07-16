@@ -22,6 +22,11 @@ body {
   height: 100vh;
 }
 
+
+/*   Main  */
+/* Containers  */
+
+
 .searchForm {
   color: white;
   margin: 300px auto 0 auto;
@@ -65,6 +70,9 @@ body {
   padding: 29px;
   transition: all 0.5s;
 }
+
+/*   Search  */
+/*   Button  */
 
 .subBtn {
   height: 35px;
@@ -122,6 +130,9 @@ a {
 }
 
 
+/*   Details  */
+/*   Section  */
+
 .details {
   max-width: 50%;
   margin: auto;
@@ -159,7 +170,6 @@ label {
   margin-right: 5px;
 }
 
-
 i.small {
   display: inline;
 }
@@ -171,13 +181,10 @@ i.small {
 button:focus {
   background-color: #40798C;
 }
-/*
-.searchForm h1::before {
-  font-family: "Material Icons";
-  content: "\E8B6";
-  vertical-align: middle;
-  margin-right: 15px;
-}*/
+
+/*   Radio  */
+/*  Buttons  */
+
 
 [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
   border: 2px solid white;
@@ -190,6 +197,9 @@ button:focus {
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
   border: 2px solid #1D3461;
 }
+
+/*   Responsive  */
+/*      CSS      */
 
 @media only screen and (max-width: 990px) {
   .ListSection {
@@ -211,16 +221,13 @@ button:focus {
 
 }
 
-
-
 @media only screen and (max-width: 600px) {
 
-.subBtn {
-  margin-top: 50px;
-}
+  .subBtn {
+    margin-top: 50px;
+  }
 
 }
-
 
 @media only screen and (max-width: 450px) {
   .details {
